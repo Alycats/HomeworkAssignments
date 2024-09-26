@@ -16,14 +16,14 @@ class Program
     {
         double miles;
         double totalKilo;
-
-
+        
         Console.WriteLine("Let us Convert Miles to Kilometers!");
         Console.WriteLine("Input Miles");
         miles = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine($"{miles} miles");
         totalKilo = miles * 1.60934;
-        Console.WriteLine($"{miles} miles when converted is {totalKilo} Kilometers");
+        double rounded = Math.Round(totalKilo,5);
+        Console.WriteLine($"{miles} miles when converted is {rounded} Kilometers");
 
     }
 
@@ -45,7 +45,9 @@ class Program
         sub = inputOne - inputTwo;
         mult = inputOne * inputTwo;
         div = inputOne / inputTwo;
-        Console.WriteLine($"So the totals of {inputOne} and {inputTwo} are : {add} added, {sub} subtracted, {mult} multiplied, and {div} divided.");
+        double subRounded = Math.Round(sub,3);
+        double divRounded = Math.Round(div,3);
+        Console.WriteLine($"So the totals of {inputOne} and {inputTwo} are : {add} added, {subRounded} subtracted, {mult} multiplied, and {divRounded} divided.");
 
 
     }
@@ -74,8 +76,9 @@ class Program
 
         age = 2024-year;
         resaleCost = 20000 * (1 - 0.10 * age);
+        double resaleRounded = Math.Round (resaleCost,4);
 
-        Console.WriteLine ($"So for a {color} {year} {make} {model} with {mileage} miles the resale value would be {resaleCost}. ");
+        Console.WriteLine ($"So for a {color} {year} {make} {model} with {mileage} miles the resale value would be {resaleRounded}. ");
     }
 
 }
